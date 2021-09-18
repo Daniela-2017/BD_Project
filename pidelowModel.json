@@ -1,0 +1,187 @@
+{
+    "modelName": "New Model",
+    "collections": [
+        {
+            "collectionName": "userClient",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "firstName",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "125034c0-18bb-11ec-81e0-9b1ea4ccc2dd",
+                    "required": true
+                },
+                {
+                    "name": "lastName",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "225d3ed0-18bb-11ec-81e0-9b1ea4ccc2dd",
+                    "required": true
+                },
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "primaryKey": true,
+                    "required": true,
+                    "GUID": "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "f40143b0-18ba-11ec-81e0-9b1ea4ccc2dd"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        }
+    ],
+    "buckets": [
+        {
+            "name": "Pidelow",
+            "type": "bucket",
+            "collectionIds": [
+                "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd"
+            ],
+            "backgroundColor": {
+                "r": 54,
+                "g": 69,
+                "b": 79,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "GUID": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        }
+    ],
+    "views": [],
+    "relationships": [],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd": "Pidelow",
+        "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd": "userClient",
+        "125034c0-18bb-11ec-81e0-9b1ea4ccc2dd": "firstName",
+        "225d3ed0-18bb-11ec-81e0-9b1ea4ccc2dd": "lastName",
+        "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd": "id"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "c0abc8f0-18ba-11ec-81e0-9b1ea4ccc2dd"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "c0abc8f1-18ba-11ec-81e0-9b1ea4ccc2dd"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "v4.4",
+    "dbVendor": "MongoDB",
+    "hideModelViews": true,
+    "appTarget": "MONGODB",
+    "creationTS": "2021-09-18T19:58:11.710Z",
+    "GUID": "c0aba1e0-18ba-11ec-81e0-9b1ea4ccc2dd",
+    "isLineageEnabled": false,
+    "lastModifTS": "2021-09-18T20:01:32.894Z",
+    "persistenceSchemaVersion": "5",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "5.1.8"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                        "x": 173,
+                        "y": 226,
+                        "width": 201,
+                        "height": 87,
+                        "color": {
+                            "hsl": {
+                                "h": 0,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 0,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 0,
+                            "source": "hex"
+                        }
+                    }
+                ],
+                "buckets": [
+                    {
+                        "x": 133,
+                        "y": 186,
+                        "GUID": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "hideRelationshipName": false,
+                    "showPropertiesBoxes": false,
+                    "nameAlongTheLine": false,
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": []
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "details": true,
+            "hideErdDetails": false,
+            "shouldDistributeCollections": false,
+            "dndHandles": true
+        }
+    }
+}
