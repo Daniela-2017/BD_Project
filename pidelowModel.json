@@ -2,7 +2,7 @@
     "modelName": "New Model",
     "collections": [
         {
-            "collectionName": "userClient",
+            "collectionName": "UserClient",
             "type": "object",
             "properties": [
                 {
@@ -28,7 +28,55 @@
                     "type": "objectId",
                     "primaryKey": true,
                     "required": true,
-                    "GUID": "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                    "GUID": "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd",
+                    "childRelationships": [
+                        "03566810-18be-11ec-a692-c729d49ae0ca",
+                        "7749fc50-19c2-11ec-a930-c321d2610e61",
+                        "2a98b210-19c3-11ec-a930-c321d2610e61",
+                        "db4cb860-19c6-11ec-a930-c321d2610e61",
+                        "4da5caa0-19c7-11ec-a930-c321d2610e61",
+                        "5f122120-19c8-11ec-a930-c321d2610e61"
+                    ]
+                },
+                {
+                    "name": "email",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "a81ca2d0-18bc-11ec-a692-c729d49ae0ca",
+                    "required": true
+                },
+                {
+                    "name": "password",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "adda5cd0-18bc-11ec-a692-c729d49ae0ca",
+                    "required": true
+                },
+                {
+                    "name": "phone",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "b6444b10-18bc-11ec-a692-c729d49ae0ca",
+                    "required": true
+                },
+                {
+                    "name": "verified",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "boolean",
+                    "GUID": "9d1830b0-19c6-11ec-a930-c321d2610e61",
+                    "default": "false"
+                },
+                {
+                    "name": "state",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "boolean",
+                    "GUID": "c7527920-19c7-11ec-a930-c321d2610e61",
+                    "default": "true"
                 }
             ],
             "definitions": {
@@ -49,6 +97,779 @@
             },
             "GUID": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
             "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "ClientDirection",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "556cc500-18bd-11ec-a692-c729d49ae0ca",
+                    "primaryKey": true,
+                    "required": true
+                },
+                {
+                    "name": "idClient",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "f5fa9b50-18bd-11ec-a692-c729d49ae0ca",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                },
+                {
+                    "name": "name",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "5c0e4f50-18bd-11ec-a692-c729d49ae0ca",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "latitud",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "73700710-18bd-11ec-a692-c729d49ae0ca",
+                    "required": true
+                },
+                {
+                    "name": "longitud",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "8c242f70-18bd-11ec-a692-c729d49ae0ca",
+                    "required": true
+                },
+                {
+                    "name": "description",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "97303fd0-18bd-11ec-a692-c729d49ae0ca",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                },
+                {
+                    "name": "aditional",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "a379d940-18bd-11ec-a692-c729d49ae0ca",
+                    "required": true
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "2bf64c50-18bd-11ec-a692-c729d49ae0ca"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "2bf2c9e0-18bd-11ec-a692-c729d49ae0ca",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "ClientCard",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "dfb42370-19c1-11ec-a930-c321d2610e61",
+                    "primaryKey": true,
+                    "childRelationships": [
+                        "2100bc60-19c9-11ec-a930-c321d2610e61"
+                    ]
+                },
+                {
+                    "name": "nameSender",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "eb718270-19c1-11ec-a930-c321d2610e61",
+                    "required": true
+                },
+                {
+                    "name": "number",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "GUID": "307952d0-19c2-11ec-a930-c321d2610e61"
+                },
+                {
+                    "name": "idClient",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "469ac260-19c2-11ec-a930-c321d2610e61",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignCollection": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                    "foreignField": [
+                        "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                        "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "7749fc50-19c2-11ec-a930-c321d2610e61"
+                },
+                {
+                    "name": "expires",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "GUID": "82ac4300-19c2-11ec-a930-c321d2610e61",
+                    "required": true
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "23d4e350-18be-11ec-a692-c729d49ae0ca"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "23d383c0-18be-11ec-a692-c729d49ae0ca",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "Product",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "09b53370-19c3-11ec-a930-c321d2610e61",
+                    "primaryKey": true,
+                    "childRelationships": [
+                        "18e30110-19c3-11ec-a930-c321d2610e61",
+                        "629805d0-19c3-11ec-a930-c321d2610e61",
+                        "c06bc4f0-19c6-11ec-a930-c321d2610e61",
+                        "40a2cc40-19c7-11ec-a930-c321d2610e61"
+                    ]
+                },
+                {
+                    "name": "idCategory",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "9c0652e0-19c3-11ec-a930-c321d2610e61",
+                    "foreignCollection": "85de7ab0-19c3-11ec-a930-c321d2610e61",
+                    "foreignField": [
+                        "85de7ab0-19c3-11ec-a930-c321d2610e61",
+                        "95e78d20-19c3-11ec-a930-c321d2610e61"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "a4c08400-19c3-11ec-a930-c321d2610e61",
+                    "required": true
+                },
+                {
+                    "name": "idTown",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "07d1b0f0-19c4-11ec-a930-c321d2610e61",
+                    "foreignCollection": "a8442c80-19c3-11ec-a930-c321d2610e61",
+                    "required": true,
+                    "foreignField": [
+                        "a8442c80-19c3-11ec-a930-c321d2610e61",
+                        "cc8b2170-19c3-11ec-a930-c321d2610e61"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "1c6c5970-19c4-11ec-a930-c321d2610e61"
+                },
+                {
+                    "name": "state",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "boolean",
+                    "GUID": "d34789f0-19c7-11ec-a930-c321d2610e61",
+                    "default": "true"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "ab180270-19c2-11ec-a930-c321d2610e61"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "ab1199d0-19c2-11ec-a930-c321d2610e61",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "Order",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "e8940f90-19c2-11ec-a930-c321d2610e61",
+                    "primaryKey": true,
+                    "childRelationships": [
+                        "0508c260-19c3-11ec-a930-c321d2610e61",
+                        "871cfbe0-19c8-11ec-a930-c321d2610e61"
+                    ]
+                },
+                {
+                    "name": "idClient",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "1e3eec00-19c3-11ec-a930-c321d2610e61",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignCollection": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                    "foreignField": [
+                        "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                        "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "2a98b210-19c3-11ec-a930-c321d2610e61"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "d4fa3540-19c2-11ec-a930-c321d2610e61"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "d4efadf0-19c2-11ec-a930-c321d2610e61",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "OrderDetail",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "ef3e7380-19c2-11ec-a930-c321d2610e61",
+                    "primaryKey": true
+                },
+                {
+                    "name": "idOrder",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "f99f4fc0-19c2-11ec-a930-c321d2610e61",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignCollection": "d4efadf0-19c2-11ec-a930-c321d2610e61",
+                    "foreignField": [
+                        "d4efadf0-19c2-11ec-a930-c321d2610e61",
+                        "e8940f90-19c2-11ec-a930-c321d2610e61"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "0508c260-19c3-11ec-a930-c321d2610e61"
+                },
+                {
+                    "name": "idProduct",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "0f070c40-19c3-11ec-a930-c321d2610e61",
+                    "primaryKey": false,
+                    "foreignCollection": "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                    "foreignField": [
+                        "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                        "09b53370-19c3-11ec-a930-c321d2610e61"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "18e30110-19c3-11ec-a930-c321d2610e61"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "dc83ae90-19c2-11ec-a930-c321d2610e61"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "dc7f1ab0-19c2-11ec-a930-c321d2610e61",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd",
+            "hackoladeMeta": {}
+        },
+        {
+            "collectionName": "HistorialProduct",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "idProduct",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "4e7f5e90-19c3-11ec-a930-c321d2610e61",
+                    "required": true,
+                    "foreignCollection": "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                    "foreignField": [
+                        "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                        "09b53370-19c3-11ec-a930-c321d2610e61"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "629805d0-19c3-11ec-a930-c321d2610e61"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "36a394d0-19c3-11ec-a930-c321d2610e61"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "369e1690-19c3-11ec-a930-c321d2610e61",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "Category",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "95e78d20-19c3-11ec-a930-c321d2610e61",
+                    "primaryKey": true,
+                    "childRelationships": [
+                        "a4c08400-19c3-11ec-a930-c321d2610e61"
+                    ]
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "85e72d40-19c3-11ec-a930-c321d2610e61"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "85de7ab0-19c3-11ec-a930-c321d2610e61",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "Town",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "cc8b2170-19c3-11ec-a930-c321d2610e61",
+                    "primaryKey": true,
+                    "childRelationships": [
+                        "1c6c5970-19c4-11ec-a930-c321d2610e61"
+                    ]
+                },
+                {
+                    "name": "idProvince",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "e995f9c0-19c3-11ec-a930-c321d2610e61",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignCollection": "be439520-19c3-11ec-a930-c321d2610e61",
+                    "foreignField": [
+                        "be439520-19c3-11ec-a930-c321d2610e61",
+                        "f51628b0-19c3-11ec-a930-c321d2610e61"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "fc173820-19c3-11ec-a930-c321d2610e61"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "a846eba0-19c3-11ec-a930-c321d2610e61"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "a8442c80-19c3-11ec-a930-c321d2610e61",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "Province",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "f51628b0-19c3-11ec-a930-c321d2610e61",
+                    "primaryKey": true,
+                    "childRelationships": [
+                        "fc173820-19c3-11ec-a930-c321d2610e61"
+                    ]
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "be46c970-19c3-11ec-a930-c321d2610e61"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "be439520-19c3-11ec-a930-c321d2610e61",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "ComentaryProduct",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "73b81ba0-19c5-11ec-a930-c321d2610e61",
+                    "primaryKey": true
+                },
+                {
+                    "name": "idClient",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "cb670c70-19c6-11ec-a930-c321d2610e61",
+                    "foreignCollection": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                    "foreignField": [
+                        "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                        "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "db4cb860-19c6-11ec-a930-c321d2610e61",
+                    "required": true
+                },
+                {
+                    "name": "idProduct",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "b62db2f0-19c6-11ec-a930-c321d2610e61",
+                    "foreignCollection": "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                    "foreignField": [
+                        "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                        "09b53370-19c3-11ec-a930-c321d2610e61"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "c06bc4f0-19c6-11ec-a930-c321d2610e61",
+                    "required": true
+                },
+                {
+                    "name": "description",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "ed1aac50-19c6-11ec-a930-c321d2610e61",
+                    "required": true
+                },
+                {
+                    "name": "dateCreate",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "GUID": "f4ce1bd0-19c6-11ec-a930-c321d2610e61",
+                    "required": true
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "67ad8700-19c5-11ec-a930-c321d2610e61"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "67a4ad60-19c5-11ec-a930-c321d2610e61",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "ValorationProduct",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "3304ed70-19c7-11ec-a930-c321d2610e61",
+                    "primaryKey": true
+                },
+                {
+                    "name": "idProduct",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "37e45560-19c7-11ec-a930-c321d2610e61",
+                    "required": true,
+                    "foreignCollection": "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                    "foreignField": [
+                        "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                        "09b53370-19c3-11ec-a930-c321d2610e61"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "40a2cc40-19c7-11ec-a930-c321d2610e61"
+                },
+                {
+                    "name": "idClient",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "41f27dc0-19c7-11ec-a930-c321d2610e61",
+                    "required": true,
+                    "foreignCollection": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                    "foreignField": [
+                        "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                        "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "4da5caa0-19c7-11ec-a930-c321d2610e61"
+                },
+                {
+                    "name": "valoration",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "4fc464e0-19c7-11ec-a930-c321d2610e61",
+                    "minimum": 0,
+                    "maximum": 5,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "23a4c530-19c7-11ec-a930-c321d2610e61"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "239eaab0-19c7-11ec-a930-c321d2610e61",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "Invoice",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "504b79c0-19c8-11ec-a930-c321d2610e61",
+                    "primaryKey": true
+                },
+                {
+                    "name": "idClient",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "56c18740-19c8-11ec-a930-c321d2610e61",
+                    "foreignCollection": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                    "foreignField": [
+                        "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                        "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "5f122120-19c8-11ec-a930-c321d2610e61",
+                    "required": true
+                },
+                {
+                    "name": "idCard",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "11c6e0d0-19c9-11ec-a930-c321d2610e61",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignCollection": "23d383c0-18be-11ec-a692-c729d49ae0ca",
+                    "foreignField": [
+                        "23d383c0-18be-11ec-a692-c729d49ae0ca",
+                        "dfb42370-19c1-11ec-a930-c321d2610e61"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "2100bc60-19c9-11ec-a930-c321d2610e61"
+                },
+                {
+                    "name": "idOrder",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "62f798b0-19c8-11ec-a930-c321d2610e61",
+                    "foreignCollection": "d4efadf0-19c2-11ec-a930-c321d2610e61",
+                    "foreignField": [
+                        "d4efadf0-19c2-11ec-a930-c321d2610e61",
+                        "e8940f90-19c2-11ec-a930-c321d2610e61"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "871cfbe0-19c8-11ec-a930-c321d2610e61",
+                    "required": true
+                },
+                {
+                    "name": "total",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "8d8c79b0-19c8-11ec-a930-c321d2610e61",
+                    "required": true
+                },
+                {
+                    "name": "dateCreate",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "GUID": "c81b51f0-19c8-11ec-a930-c321d2610e61",
+                    "required": true
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "fc6e0de0-19c7-11ec-a930-c321d2610e61"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "fc67cc50-19c7-11ec-a930-c321d2610e61",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
         }
     ],
     "buckets": [
@@ -56,7 +877,19 @@
             "name": "Pidelow",
             "type": "bucket",
             "collectionIds": [
-                "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd"
+                "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                "2bf2c9e0-18bd-11ec-a692-c729d49ae0ca",
+                "23d383c0-18be-11ec-a692-c729d49ae0ca",
+                "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                "d4efadf0-19c2-11ec-a930-c321d2610e61",
+                "dc7f1ab0-19c2-11ec-a930-c321d2610e61",
+                "369e1690-19c3-11ec-a930-c321d2610e61",
+                "85de7ab0-19c3-11ec-a930-c321d2610e61",
+                "a8442c80-19c3-11ec-a930-c321d2610e61",
+                "be439520-19c3-11ec-a930-c321d2610e61",
+                "67a4ad60-19c5-11ec-a930-c321d2610e61",
+                "239eaab0-19c7-11ec-a930-c321d2610e61",
+                "fc67cc50-19c7-11ec-a930-c321d2610e61"
             ],
             "backgroundColor": {
                 "r": 54,
@@ -70,15 +903,426 @@
         }
     ],
     "views": [],
-    "relationships": [],
+    "relationships": [
+        {
+            "name": "fk UserClient. to ClientDirection.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                    "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "2bf2c9e0-18bd-11ec-a692-c729d49ae0ca",
+                    "f5fa9b50-18bd-11ec-a692-c729d49ae0ca"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "03566810-18be-11ec-a692-c729d49ae0ca",
+            "parentCollection": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+            "childCollection": "2bf2c9e0-18bd-11ec-a692-c729d49ae0ca"
+        },
+        {
+            "name": "fk UserClient. to ClientCard.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                    "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "23d383c0-18be-11ec-a692-c729d49ae0ca",
+                    "469ac260-19c2-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "7749fc50-19c2-11ec-a930-c321d2610e61",
+            "parentCollection": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+            "childCollection": "23d383c0-18be-11ec-a692-c729d49ae0ca"
+        },
+        {
+            "name": "fk Order. to OrderDetail.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "d4efadf0-19c2-11ec-a930-c321d2610e61",
+                    "e8940f90-19c2-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "dc7f1ab0-19c2-11ec-a930-c321d2610e61",
+                    "f99f4fc0-19c2-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "0508c260-19c3-11ec-a930-c321d2610e61",
+            "parentCollection": "d4efadf0-19c2-11ec-a930-c321d2610e61",
+            "childCollection": "dc7f1ab0-19c2-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk Product. to OrderDetail.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                    "09b53370-19c3-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "dc7f1ab0-19c2-11ec-a930-c321d2610e61",
+                    "0f070c40-19c3-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "18e30110-19c3-11ec-a930-c321d2610e61",
+            "parentCollection": "ab1199d0-19c2-11ec-a930-c321d2610e61",
+            "childCollection": "dc7f1ab0-19c2-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk UserClient. to Order.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                    "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "d4efadf0-19c2-11ec-a930-c321d2610e61",
+                    "1e3eec00-19c3-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "2a98b210-19c3-11ec-a930-c321d2610e61",
+            "parentCollection": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+            "childCollection": "d4efadf0-19c2-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk Product. to HistorialProduct.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                    "09b53370-19c3-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "369e1690-19c3-11ec-a930-c321d2610e61",
+                    "4e7f5e90-19c3-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "629805d0-19c3-11ec-a930-c321d2610e61",
+            "parentCollection": "ab1199d0-19c2-11ec-a930-c321d2610e61",
+            "childCollection": "369e1690-19c3-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk Category. to Product.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "85de7ab0-19c3-11ec-a930-c321d2610e61",
+                    "95e78d20-19c3-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                    "9c0652e0-19c3-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "a4c08400-19c3-11ec-a930-c321d2610e61",
+            "parentCollection": "85de7ab0-19c3-11ec-a930-c321d2610e61",
+            "childCollection": "ab1199d0-19c2-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk Province. to Town.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "be439520-19c3-11ec-a930-c321d2610e61",
+                    "f51628b0-19c3-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "a8442c80-19c3-11ec-a930-c321d2610e61",
+                    "e995f9c0-19c3-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "fc173820-19c3-11ec-a930-c321d2610e61",
+            "parentCollection": "be439520-19c3-11ec-a930-c321d2610e61",
+            "childCollection": "a8442c80-19c3-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk Town. to Product.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "a8442c80-19c3-11ec-a930-c321d2610e61",
+                    "cc8b2170-19c3-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                    "07d1b0f0-19c4-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "1c6c5970-19c4-11ec-a930-c321d2610e61",
+            "parentCollection": "a8442c80-19c3-11ec-a930-c321d2610e61",
+            "childCollection": "ab1199d0-19c2-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk Product. to Comentary.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                    "09b53370-19c3-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "67a4ad60-19c5-11ec-a930-c321d2610e61",
+                    "b62db2f0-19c6-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "c06bc4f0-19c6-11ec-a930-c321d2610e61",
+            "parentCollection": "ab1199d0-19c2-11ec-a930-c321d2610e61",
+            "childCollection": "67a4ad60-19c5-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk UserClient. to Comentary.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                    "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "67a4ad60-19c5-11ec-a930-c321d2610e61",
+                    "cb670c70-19c6-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "db4cb860-19c6-11ec-a930-c321d2610e61",
+            "parentCollection": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+            "childCollection": "67a4ad60-19c5-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk Product. to ValorationProduct.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                    "09b53370-19c3-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "239eaab0-19c7-11ec-a930-c321d2610e61",
+                    "37e45560-19c7-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "40a2cc40-19c7-11ec-a930-c321d2610e61",
+            "parentCollection": "ab1199d0-19c2-11ec-a930-c321d2610e61",
+            "childCollection": "239eaab0-19c7-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk UserClient. to ValorationProduct.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                    "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "239eaab0-19c7-11ec-a930-c321d2610e61",
+                    "41f27dc0-19c7-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "4da5caa0-19c7-11ec-a930-c321d2610e61",
+            "parentCollection": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+            "childCollection": "239eaab0-19c7-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk UserClient. to Invoice.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+                    "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "fc67cc50-19c7-11ec-a930-c321d2610e61",
+                    "56c18740-19c8-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "5f122120-19c8-11ec-a930-c321d2610e61",
+            "parentCollection": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
+            "childCollection": "fc67cc50-19c7-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk Order. to Invoice.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "d4efadf0-19c2-11ec-a930-c321d2610e61",
+                    "e8940f90-19c2-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "fc67cc50-19c7-11ec-a930-c321d2610e61",
+                    "62f798b0-19c8-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "871cfbe0-19c8-11ec-a930-c321d2610e61",
+            "parentCollection": "d4efadf0-19c2-11ec-a930-c321d2610e61",
+            "childCollection": "fc67cc50-19c7-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "fk ClientCard. to Invoice.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "23d383c0-18be-11ec-a692-c729d49ae0ca",
+                    "dfb42370-19c1-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "fc67cc50-19c7-11ec-a930-c321d2610e61",
+                    "11c6e0d0-19c9-11ec-a930-c321d2610e61"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "2100bc60-19c9-11ec-a930-c321d2610e61",
+            "parentCollection": "23d383c0-18be-11ec-a692-c729d49ae0ca",
+            "childCollection": "fc67cc50-19c7-11ec-a930-c321d2610e61"
+        }
+    ],
     "users": [],
     "diagramViews": [],
     "idToNameHashTable": {
         "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd": "Pidelow",
-        "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd": "userClient",
+        "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd": "UserClient",
         "125034c0-18bb-11ec-81e0-9b1ea4ccc2dd": "firstName",
         "225d3ed0-18bb-11ec-81e0-9b1ea4ccc2dd": "lastName",
-        "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd": "id"
+        "2a8b83a0-18bb-11ec-81e0-9b1ea4ccc2dd": "id",
+        "a81ca2d0-18bc-11ec-a692-c729d49ae0ca": "email",
+        "adda5cd0-18bc-11ec-a692-c729d49ae0ca": "password",
+        "b6444b10-18bc-11ec-a692-c729d49ae0ca": "phone",
+        "2bf2c9e0-18bd-11ec-a692-c729d49ae0ca": "ClientDirection",
+        "556cc500-18bd-11ec-a692-c729d49ae0ca": "id",
+        "5c0e4f50-18bd-11ec-a692-c729d49ae0ca": "name",
+        "73700710-18bd-11ec-a692-c729d49ae0ca": "latitud",
+        "8c242f70-18bd-11ec-a692-c729d49ae0ca": "longitud",
+        "97303fd0-18bd-11ec-a692-c729d49ae0ca": "description",
+        "a379d940-18bd-11ec-a692-c729d49ae0ca": "aditional",
+        "03566810-18be-11ec-a692-c729d49ae0ca": "fk UserClient. to ClientDirection.",
+        "f5fa9b50-18bd-11ec-a692-c729d49ae0ca": "idClient",
+        "23d383c0-18be-11ec-a692-c729d49ae0ca": "ClientCard",
+        "dfb42370-19c1-11ec-a930-c321d2610e61": "id",
+        "eb718270-19c1-11ec-a930-c321d2610e61": "nameSender",
+        "307952d0-19c2-11ec-a930-c321d2610e61": "number",
+        "469ac260-19c2-11ec-a930-c321d2610e61": "idClient",
+        "7749fc50-19c2-11ec-a930-c321d2610e61": "fk UserClient. to ClientCard.",
+        "82ac4300-19c2-11ec-a930-c321d2610e61": "expires",
+        "ab1199d0-19c2-11ec-a930-c321d2610e61": "Product",
+        "d4efadf0-19c2-11ec-a930-c321d2610e61": "Order",
+        "dc7f1ab0-19c2-11ec-a930-c321d2610e61": "OrderDetail",
+        "e8940f90-19c2-11ec-a930-c321d2610e61": "id",
+        "ef3e7380-19c2-11ec-a930-c321d2610e61": "id",
+        "f99f4fc0-19c2-11ec-a930-c321d2610e61": "idOrder",
+        "0508c260-19c3-11ec-a930-c321d2610e61": "fk Order. to OrderDetail.",
+        "09b53370-19c3-11ec-a930-c321d2610e61": "id",
+        "0f070c40-19c3-11ec-a930-c321d2610e61": "idProduct",
+        "18e30110-19c3-11ec-a930-c321d2610e61": "fk Product. to OrderDetail.",
+        "1e3eec00-19c3-11ec-a930-c321d2610e61": "idClient",
+        "2a98b210-19c3-11ec-a930-c321d2610e61": "fk UserClient. to Order.",
+        "369e1690-19c3-11ec-a930-c321d2610e61": "HistorialProduct",
+        "4e7f5e90-19c3-11ec-a930-c321d2610e61": "idProduct",
+        "629805d0-19c3-11ec-a930-c321d2610e61": "fk Product. to HistorialProduct.",
+        "85de7ab0-19c3-11ec-a930-c321d2610e61": "Category",
+        "95e78d20-19c3-11ec-a930-c321d2610e61": "id",
+        "9c0652e0-19c3-11ec-a930-c321d2610e61": "idCategory",
+        "a4c08400-19c3-11ec-a930-c321d2610e61": "fk Category. to Product.",
+        "a8442c80-19c3-11ec-a930-c321d2610e61": "Town",
+        "be439520-19c3-11ec-a930-c321d2610e61": "Province",
+        "cc8b2170-19c3-11ec-a930-c321d2610e61": "id",
+        "e995f9c0-19c3-11ec-a930-c321d2610e61": "idProvince",
+        "f51628b0-19c3-11ec-a930-c321d2610e61": "id",
+        "fc173820-19c3-11ec-a930-c321d2610e61": "fk Province. to Town.",
+        "07d1b0f0-19c4-11ec-a930-c321d2610e61": "idTown",
+        "1c6c5970-19c4-11ec-a930-c321d2610e61": "fk Town. to Product.",
+        "67a4ad60-19c5-11ec-a930-c321d2610e61": "ComentaryProduct",
+        "73b81ba0-19c5-11ec-a930-c321d2610e61": "id",
+        "9d1830b0-19c6-11ec-a930-c321d2610e61": "verified",
+        "b62db2f0-19c6-11ec-a930-c321d2610e61": "idProduct",
+        "c06bc4f0-19c6-11ec-a930-c321d2610e61": "fk Product. to Comentary.",
+        "db4cb860-19c6-11ec-a930-c321d2610e61": "fk UserClient. to Comentary.",
+        "ed1aac50-19c6-11ec-a930-c321d2610e61": "description",
+        "f4ce1bd0-19c6-11ec-a930-c321d2610e61": "dateCreate",
+        "cb670c70-19c6-11ec-a930-c321d2610e61": "idClient",
+        "239eaab0-19c7-11ec-a930-c321d2610e61": "ValorationProduct",
+        "3304ed70-19c7-11ec-a930-c321d2610e61": "id",
+        "37e45560-19c7-11ec-a930-c321d2610e61": "idProduct",
+        "40a2cc40-19c7-11ec-a930-c321d2610e61": "fk Product. to ValorationProduct.",
+        "41f27dc0-19c7-11ec-a930-c321d2610e61": "idClient",
+        "4da5caa0-19c7-11ec-a930-c321d2610e61": "fk UserClient. to ValorationProduct.",
+        "4fc464e0-19c7-11ec-a930-c321d2610e61": "valoration",
+        "c7527920-19c7-11ec-a930-c321d2610e61": "state",
+        "d34789f0-19c7-11ec-a930-c321d2610e61": "state",
+        "fc67cc50-19c7-11ec-a930-c321d2610e61": "Invoice",
+        "504b79c0-19c8-11ec-a930-c321d2610e61": "id",
+        "56c18740-19c8-11ec-a930-c321d2610e61": "idClient",
+        "5f122120-19c8-11ec-a930-c321d2610e61": "fk UserClient. to Invoice.",
+        "62f798b0-19c8-11ec-a930-c321d2610e61": "idOrder",
+        "871cfbe0-19c8-11ec-a930-c321d2610e61": "fk Order. to Invoice.",
+        "8d8c79b0-19c8-11ec-a930-c321d2610e61": "total",
+        "c81b51f0-19c8-11ec-a930-c321d2610e61": "dateCreate",
+        "2100bc60-19c9-11ec-a930-c321d2610e61": "fk ClientCard. to Invoice.",
+        "11c6e0d0-19c9-11ec-a930-c321d2610e61": "idCard"
     },
     "definitions": {
         "type": "definitions",
@@ -99,7 +1343,7 @@
     "creationTS": "2021-09-18T19:58:11.710Z",
     "GUID": "c0aba1e0-18ba-11ec-81e0-9b1ea4ccc2dd",
     "isLineageEnabled": false,
-    "lastModifTS": "2021-09-18T20:01:32.894Z",
+    "lastModifTS": "2021-09-20T04:14:16.188Z",
     "persistenceSchemaVersion": "5",
     "isCreatedByPlugin": true,
     "pluginInformation": {
@@ -108,16 +1352,17 @@
     "applicationInformation": {
         "version": "5.1.8"
     },
+    "hackoladeMeta": {},
     "settings": {
         "centralPane": {
             "dbLevel": {
                 "erd": [
                     {
                         "GUID": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
-                        "x": 173,
-                        "y": 226,
-                        "width": 201,
-                        "height": 87,
+                        "x": 334,
+                        "y": 237,
+                        "width": 208,
+                        "height": 177,
                         "color": {
                             "hsl": {
                                 "h": 0,
@@ -141,12 +1386,372 @@
                             "oldHue": 0,
                             "source": "hex"
                         }
+                    },
+                    {
+                        "GUID": "2bf2c9e0-18bd-11ec-a692-c729d49ae0ca",
+                        "x": 80,
+                        "y": 337,
+                        "width": 208,
+                        "height": 159,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "23d383c0-18be-11ec-a692-c729d49ae0ca",
+                        "x": 119,
+                        "y": 722,
+                        "width": 225,
+                        "height": 123,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                        "x": 980,
+                        "y": 230,
+                        "width": 214,
+                        "height": 105,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "d4efadf0-19c2-11ec-a930-c321d2610e61",
+                        "x": 853,
+                        "y": 385,
+                        "width": 165,
+                        "height": 69,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "dc7f1ab0-19c2-11ec-a930-c321d2610e61",
+                        "x": 1148,
+                        "y": 544,
+                        "width": 188,
+                        "height": 87,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "369e1690-19c3-11ec-a930-c321d2610e61",
+                        "x": 657,
+                        "y": 234,
+                        "width": 213,
+                        "height": 51,
+                        "color": {
+                            "hsl": {
+                                "h": 204.00000000000003,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 204.00000000000003,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 204.00000000000003,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "85de7ab0-19c3-11ec-a930-c321d2610e61",
+                        "x": 1274,
+                        "y": 383,
+                        "width": 172,
+                        "height": 51,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "a8442c80-19c3-11ec-a930-c321d2610e61",
+                        "x": 1247,
+                        "y": 157,
+                        "width": 181,
+                        "height": 69,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "be439520-19c3-11ec-a930-c321d2610e61",
+                        "x": 1484,
+                        "y": 80,
+                        "width": 171,
+                        "height": 51,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "67a4ad60-19c5-11ec-a930-c321d2610e61",
+                        "x": 889,
+                        "y": 768,
+                        "width": 228,
+                        "height": 123,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "239eaab0-19c7-11ec-a930-c321d2610e61",
+                        "x": 669,
+                        "y": 80,
+                        "width": 224,
+                        "height": 105,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "fc67cc50-19c7-11ec-a930-c321d2610e61",
+                        "x": 470,
+                        "y": 558,
+                        "width": 214,
+                        "height": 141,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
                     }
                 ],
                 "buckets": [
                     {
-                        "x": 133,
-                        "y": 186,
+                        "x": 40,
+                        "y": 40,
                         "GUID": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
                     }
                 ],
