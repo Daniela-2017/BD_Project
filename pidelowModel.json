@@ -319,6 +319,24 @@
                     "type": "boolean",
                     "GUID": "d34789f0-19c7-11ec-a930-c321d2610e61",
                     "default": "true"
+                },
+                {
+                    "name": "idCompany",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "aa5242a0-19dc-11ec-8616-6b14eda9223b",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignCollection": "2e791e90-19d9-11ec-8616-6b14eda9223b",
+                    "foreignField": [
+                        "2e791e90-19d9-11ec-8616-6b14eda9223b",
+                        "2e7d6450-19d9-11ec-8616-6b14eda9223b"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "b3dac040-19dc-11ec-8616-6b14eda9223b"
                 }
             ],
             "definitions": {
@@ -870,6 +888,201 @@
             },
             "GUID": "fc67cc50-19c7-11ec-a930-c321d2610e61",
             "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "Company",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "name",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "primaryKey": true,
+                    "GUID": "2e7d6450-19d9-11ec-8616-6b14eda9223b",
+                    "childRelationships": [
+                        "7c4307f0-19dc-11ec-8616-6b14eda9223b",
+                        "b3dac040-19dc-11ec-8616-6b14eda9223b"
+                    ],
+                    "error": {}
+                },
+                {
+                    "name": "idDirection",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "required": true,
+                    "GUID": "2e7d8b60-19d9-11ec-8616-6b14eda9223b",
+                    "error": {},
+                    "foreignCollection": "8a9fe670-19db-11ec-8616-6b14eda9223b",
+                    "foreignField": [
+                        "8a9fe670-19db-11ec-8616-6b14eda9223b",
+                        "a311d5b0-19db-11ec-8616-6b14eda9223b"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "84dd5500-19dc-11ec-8616-6b14eda9223b"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "2e7d8b65-19d9-11ec-8616-6b14eda9223b"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "2e791e90-19d9-11ec-8616-6b14eda9223b",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
+        },
+        {
+            "collectionName": "CompanyDirection",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "latitud",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "d01bae50-19db-11ec-8616-6b14eda9223b",
+                    "error": {}
+                },
+                {
+                    "name": "nameCompany",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "b6e5f9e0-19db-11ec-8616-6b14eda9223b",
+                    "error": {},
+                    "foreignCollection": "2e791e90-19d9-11ec-8616-6b14eda9223b",
+                    "foreignField": [
+                        "2e791e90-19d9-11ec-8616-6b14eda9223b",
+                        "2e7d6450-19d9-11ec-8616-6b14eda9223b"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "7c4307f0-19dc-11ec-8616-6b14eda9223b"
+                },
+                {
+                    "name": "longitud",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "d971d150-19db-11ec-8616-6b14eda9223b",
+                    "error": {}
+                },
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "a311d5b0-19db-11ec-8616-6b14eda9223b",
+                    "primaryKey": true,
+                    "childRelationships": [
+                        "84dd5500-19dc-11ec-8616-6b14eda9223b"
+                    ]
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "8aa564b0-19db-11ec-8616-6b14eda9223b"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "8a9fe670-19db-11ec-8616-6b14eda9223b",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd",
+            "hackoladeMeta": {}
+        },
+        {
+            "collectionName": "Administrator",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "phoneNumber",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "fa952d30-19dd-11ec-8616-6b14eda9223b",
+                    "error": {}
+                },
+                {
+                    "name": "email",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "b35d0f50-19dd-11ec-8616-6b14eda9223b",
+                    "error": {}
+                },
+                {
+                    "name": "password",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "f1668f60-19dd-11ec-8616-6b14eda9223b",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                },
+                {
+                    "name": "lastName",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "e9a87180-19dd-11ec-8616-6b14eda9223b",
+                    "error": {}
+                },
+                {
+                    "name": "firstName",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "a7d650b0-19dd-11ec-8616-6b14eda9223b",
+                    "error": {}
+                },
+                {
+                    "name": "idAdmin",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "9b2ac120-19dd-11ec-8616-6b14eda9223b",
+                    "primaryKey": true
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "82a94180-19dd-11ec-8616-6b14eda9223b"
+            },
+            "isActivated": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "82a60d30-19dd-11ec-8616-6b14eda9223b",
+            "bucketId": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
         }
     ],
     "buckets": [
@@ -889,7 +1102,10 @@
                 "be439520-19c3-11ec-a930-c321d2610e61",
                 "67a4ad60-19c5-11ec-a930-c321d2610e61",
                 "239eaab0-19c7-11ec-a930-c321d2610e61",
-                "fc67cc50-19c7-11ec-a930-c321d2610e61"
+                "fc67cc50-19c7-11ec-a930-c321d2610e61",
+                "2e791e90-19d9-11ec-8616-6b14eda9223b",
+                "8a9fe670-19db-11ec-8616-6b14eda9223b",
+                "82a60d30-19dd-11ec-8616-6b14eda9223b"
             ],
             "backgroundColor": {
                 "r": 54,
@@ -1239,6 +1455,78 @@
             "GUID": "2100bc60-19c9-11ec-a930-c321d2610e61",
             "parentCollection": "23d383c0-18be-11ec-a692-c729d49ae0ca",
             "childCollection": "fc67cc50-19c7-11ec-a930-c321d2610e61"
+        },
+        {
+            "name": "",
+            "relationshipType": "",
+            "parentField": [],
+            "parentCardinality": "1",
+            "childField": [],
+            "childCardinality": "1",
+            "GUID": "2be43b80-19dc-11ec-8616-6b14eda9223b"
+        },
+        {
+            "name": "fk Company. to CompanyDirection.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "2e791e90-19d9-11ec-8616-6b14eda9223b",
+                    "2e7d6450-19d9-11ec-8616-6b14eda9223b"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "8a9fe670-19db-11ec-8616-6b14eda9223b",
+                    "b6e5f9e0-19db-11ec-8616-6b14eda9223b"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "7c4307f0-19dc-11ec-8616-6b14eda9223b",
+            "parentCollection": "2e791e90-19d9-11ec-8616-6b14eda9223b",
+            "childCollection": "8a9fe670-19db-11ec-8616-6b14eda9223b"
+        },
+        {
+            "name": "fk CompanyDirection. to Company.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "8a9fe670-19db-11ec-8616-6b14eda9223b",
+                    "a311d5b0-19db-11ec-8616-6b14eda9223b"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "2e791e90-19d9-11ec-8616-6b14eda9223b",
+                    "2e7d8b60-19d9-11ec-8616-6b14eda9223b"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "84dd5500-19dc-11ec-8616-6b14eda9223b",
+            "parentCollection": "8a9fe670-19db-11ec-8616-6b14eda9223b",
+            "childCollection": "2e791e90-19d9-11ec-8616-6b14eda9223b"
+        },
+        {
+            "name": "fk Company. to Product.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "2e791e90-19d9-11ec-8616-6b14eda9223b",
+                    "2e7d6450-19d9-11ec-8616-6b14eda9223b"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "ab1199d0-19c2-11ec-a930-c321d2610e61",
+                    "aa5242a0-19dc-11ec-8616-6b14eda9223b"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "b3dac040-19dc-11ec-8616-6b14eda9223b",
+            "parentCollection": "2e791e90-19d9-11ec-8616-6b14eda9223b",
+            "childCollection": "ab1199d0-19c2-11ec-a930-c321d2610e61"
         }
     ],
     "users": [],
@@ -1322,7 +1610,27 @@
         "8d8c79b0-19c8-11ec-a930-c321d2610e61": "total",
         "c81b51f0-19c8-11ec-a930-c321d2610e61": "dateCreate",
         "2100bc60-19c9-11ec-a930-c321d2610e61": "fk ClientCard. to Invoice.",
-        "11c6e0d0-19c9-11ec-a930-c321d2610e61": "idCard"
+        "11c6e0d0-19c9-11ec-a930-c321d2610e61": "idCard",
+        "2e7d6450-19d9-11ec-8616-6b14eda9223b": "name",
+        "2e7d8b60-19d9-11ec-8616-6b14eda9223b": "idDirection",
+        "2e791e90-19d9-11ec-8616-6b14eda9223b": "Company",
+        "8a9fe670-19db-11ec-8616-6b14eda9223b": "CompanyDirection",
+        "a311d5b0-19db-11ec-8616-6b14eda9223b": "id",
+        "b6e5f9e0-19db-11ec-8616-6b14eda9223b": "nameCompany",
+        "d01bae50-19db-11ec-8616-6b14eda9223b": "latitud",
+        "d971d150-19db-11ec-8616-6b14eda9223b": "longitud",
+        "2be43b80-19dc-11ec-8616-6b14eda9223b": "",
+        "7c4307f0-19dc-11ec-8616-6b14eda9223b": "fk Company. to CompanyDirection.",
+        "84dd5500-19dc-11ec-8616-6b14eda9223b": "fk CompanyDirection. to Company.",
+        "aa5242a0-19dc-11ec-8616-6b14eda9223b": "idCompany",
+        "b3dac040-19dc-11ec-8616-6b14eda9223b": "fk Company. to Product.",
+        "82a60d30-19dd-11ec-8616-6b14eda9223b": "Administrator",
+        "9b2ac120-19dd-11ec-8616-6b14eda9223b": "idAdmin",
+        "a7d650b0-19dd-11ec-8616-6b14eda9223b": "firstName",
+        "b35d0f50-19dd-11ec-8616-6b14eda9223b": "email",
+        "e9a87180-19dd-11ec-8616-6b14eda9223b": "lastName",
+        "f1668f60-19dd-11ec-8616-6b14eda9223b": "password",
+        "fa952d30-19dd-11ec-8616-6b14eda9223b": "phoneNumber"
     },
     "definitions": {
         "type": "definitions",
@@ -1343,7 +1651,7 @@
     "creationTS": "2021-09-18T19:58:11.710Z",
     "GUID": "c0aba1e0-18ba-11ec-81e0-9b1ea4ccc2dd",
     "isLineageEnabled": false,
-    "lastModifTS": "2021-09-20T04:14:16.188Z",
+    "lastModifTS": "2021-09-20T06:44:16.115Z",
     "persistenceSchemaVersion": "5",
     "isCreatedByPlugin": true,
     "pluginInformation": {
@@ -1359,7 +1667,7 @@
                 "erd": [
                     {
                         "GUID": "f3fc1390-18ba-11ec-81e0-9b1ea4ccc2dd",
-                        "x": 334,
+                        "x": 385.33333333333337,
                         "y": 237,
                         "width": 208,
                         "height": 177,
@@ -1389,7 +1697,7 @@
                     },
                     {
                         "GUID": "2bf2c9e0-18bd-11ec-a692-c729d49ae0ca",
-                        "x": 80,
+                        "x": 131.33333333333337,
                         "y": 337,
                         "width": 208,
                         "height": 159,
@@ -1419,8 +1727,8 @@
                     },
                     {
                         "GUID": "23d383c0-18be-11ec-a692-c729d49ae0ca",
-                        "x": 119,
-                        "y": 722,
+                        "x": 158.33333333333337,
+                        "y": 628,
                         "width": 225,
                         "height": 123,
                         "color": {
@@ -1449,10 +1757,10 @@
                     },
                     {
                         "GUID": "ab1199d0-19c2-11ec-a930-c321d2610e61",
-                        "x": 980,
-                        "y": 230,
-                        "width": 214,
-                        "height": 105,
+                        "x": 1017.9999999999999,
+                        "y": 231.33333333333331,
+                        "width": 217,
+                        "height": 123,
                         "color": {
                             "hsl": {
                                 "h": 206.57142857142858,
@@ -1479,7 +1787,7 @@
                     },
                     {
                         "GUID": "d4efadf0-19c2-11ec-a930-c321d2610e61",
-                        "x": 853,
+                        "x": 904.3333333333333,
                         "y": 385,
                         "width": 165,
                         "height": 69,
@@ -1509,7 +1817,7 @@
                     },
                     {
                         "GUID": "dc7f1ab0-19c2-11ec-a930-c321d2610e61",
-                        "x": 1148,
+                        "x": 1199.3333333333335,
                         "y": 544,
                         "width": 188,
                         "height": 87,
@@ -1539,7 +1847,7 @@
                     },
                     {
                         "GUID": "369e1690-19c3-11ec-a930-c321d2610e61",
-                        "x": 657,
+                        "x": 708.3333333333333,
                         "y": 234,
                         "width": 213,
                         "height": 51,
@@ -1569,7 +1877,7 @@
                     },
                     {
                         "GUID": "85de7ab0-19c3-11ec-a930-c321d2610e61",
-                        "x": 1274,
+                        "x": 1325.3333333333335,
                         "y": 383,
                         "width": 172,
                         "height": 51,
@@ -1599,7 +1907,7 @@
                     },
                     {
                         "GUID": "a8442c80-19c3-11ec-a930-c321d2610e61",
-                        "x": 1247,
+                        "x": 1298.3333333333335,
                         "y": 157,
                         "width": 181,
                         "height": 69,
@@ -1629,7 +1937,7 @@
                     },
                     {
                         "GUID": "be439520-19c3-11ec-a930-c321d2610e61",
-                        "x": 1484,
+                        "x": 1535.3333333333335,
                         "y": 80,
                         "width": 171,
                         "height": 51,
@@ -1659,8 +1967,8 @@
                     },
                     {
                         "GUID": "67a4ad60-19c5-11ec-a930-c321d2610e61",
-                        "x": 889,
-                        "y": 768,
+                        "x": 1000.3333333333334,
+                        "y": 782.6666666666667,
                         "width": 228,
                         "height": 123,
                         "color": {
@@ -1689,7 +1997,7 @@
                     },
                     {
                         "GUID": "239eaab0-19c7-11ec-a930-c321d2610e61",
-                        "x": 669,
+                        "x": 720.3333333333333,
                         "y": 80,
                         "width": 224,
                         "height": 105,
@@ -1719,9 +2027,99 @@
                     },
                     {
                         "GUID": "fc67cc50-19c7-11ec-a930-c321d2610e61",
-                        "x": 470,
+                        "x": 521.3333333333333,
                         "y": 558,
                         "width": 214,
+                        "height": 141,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "2e791e90-19d9-11ec-8616-6b14eda9223b",
+                        "x": 454.00000000000017,
+                        "y": 790.3333333333333,
+                        "width": 207,
+                        "height": 69,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "8a9fe670-19db-11ec-8616-6b14eda9223b",
+                        "x": 155.33333333333337,
+                        "y": 786.3999938964844,
+                        "width": 227,
+                        "height": 112,
+                        "color": {
+                            "hsl": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "l": 0.2,
+                                "a": 1
+                            },
+                            "hex": "#333333",
+                            "rgb": {
+                                "r": 51,
+                                "g": 51,
+                                "b": 51,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 206.57142857142858,
+                                "s": 0,
+                                "v": 0.2,
+                                "a": 1
+                            },
+                            "oldHue": 206.57142857142858,
+                            "source": "hex"
+                        }
+                    },
+                    {
+                        "GUID": "82a60d30-19dd-11ec-8616-6b14eda9223b",
+                        "x": 702.6666666666663,
+                        "y": 890.4000040690104,
+                        "width": 204,
                         "height": 141,
                         "color": {
                             "hsl": {
@@ -1750,7 +2148,7 @@
                 ],
                 "buckets": [
                     {
-                        "x": 40,
+                        "x": 91.33333333333337,
                         "y": 40,
                         "GUID": "ea416260-18ba-11ec-81e0-9b1ea4ccc2dd"
                     }
